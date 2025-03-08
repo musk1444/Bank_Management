@@ -5,7 +5,11 @@ The Bank Management System automates core banking operations like account creati
 
 How it Works:
 Customers open an account, and their details are stored in the ACCOUNT_OPENING table.
+
 When KYC is approved, a trigger automatically creates an account in the BANK and adds customer details to ACCOUNT_HOLDER.
+
 Customers can deposit/withdraw money using stored procedures (sp_credit_into, sp_debit_into), which update the TRANSACTION_DETAILS and BANK tables.
+
 The passbook procedure (sp_give_passbook) retrieves transaction history for a given period.
+
 This system ensures automation, security (rollback for insufficient funds), and efficiency in managing banking operations.
